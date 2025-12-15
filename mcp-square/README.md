@@ -26,3 +26,22 @@ Required:
 
 - `MONGODB_URI` — MongoDB connection string (used by server-side data layer; required once DB-backed features are enabled).
 - `NEXT_PUBLIC_SITE_URL` — Public base URL (used for metadata / canonical URL generation).
+
+## Database Schema
+
+### MCP Service
+
+Fields:
+- `title`: String (Required)
+- `summary`: String (Required)
+- `category`: String (Required)
+- `tags`: Array of Strings
+- `pricing`: String (Default: 'Free')
+- `status`: 'active' | 'draft' | 'archived' (Default: 'draft')
+- `contactInfo`: String
+- `createdAt`: Date
+- `updatedAt`: Date
+
+## Scripts
+
+- `npm run seed:mcp`: Seeding the database with example MCP services.

@@ -9,22 +9,27 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "format": "prettier --check .",
-    "format:fix": "prettier --write ."
+    "format:fix": "prettier --write .",
+    "seed:mcp": "ts-node -O '{\"module\":\"commonjs\"}' scripts/seed-mcp.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "mongoose": "^9.0.1",
     "next": "^14.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zod": "^4.2.0"
   },
   "devDependencies": {
     "@types/node": "^20.12.12",
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.25",
+    "dotenv": "^17.2.3",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.0",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.3.2",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   }
 }
