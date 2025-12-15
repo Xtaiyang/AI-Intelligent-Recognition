@@ -51,3 +51,32 @@ url: "https://caozha.com/xxxxx/AccessToken_get.php",
 ![输入图片说明](https://images.gitee.com/uploads/images/2020/0504/200311_1fa465ba_7397417.png "测试结果1")
 ![输入图片说明](https://images.gitee.com/uploads/images/2020/0504/200649_2f1b2f64_7397417.jpeg "测试结果2")
 ![输入图片说明](https://images.gitee.com/uploads/images/2020/0504/200702_72e4ba6f_7397417.jpeg "测试结果3")
+
+---
+
+## mcp-square (Next.js 14 + TypeScript)
+
+This repo also contains a Next.js 14 (App Router) + TypeScript (strict) app in `./mcp-square`.
+
+### Install / run
+
+```bash
+cd mcp-square
+npm install
+npm run dev
+```
+
+### Build / start
+
+```bash
+cd mcp-square
+npm run build
+npm run start
+```
+
+### Environment variables
+
+Create `mcp-square/.env.local` (see `mcp-square/.env.example`).
+
+- `MONGODB_URI` — MongoDB connection string.
+- `NEXT_PUBLIC_SITE_URL` — public base URL (used for metadata / canonical URL generation).
