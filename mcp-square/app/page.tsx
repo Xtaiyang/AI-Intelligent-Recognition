@@ -2,6 +2,8 @@ import { ButtonLink } from '@/components/ui/Button';
 import { Card, CardDescription, CardTitle } from '@/components/ui/Card';
 import { listServices } from '@/lib/services';
 
+export const dynamic = 'force-dynamic';
+
 export default function HomePage() {
   const services = listServices().slice(0, 2);
 
@@ -9,8 +11,8 @@ export default function HomePage() {
     <div>
       <h1 className="h1">MCP Square</h1>
       <p className="lead">
-        A Next.js 14 starter for building a marketplace of MCP services. This is a scaffold with
-        placeholder routes and shared UI primitives.
+        A Next.js 14 starter for building a marketplace of MCP services. Includes public detail pages
+        and a demo admin CRUD interface.
       </p>
 
       <div className="row">
@@ -25,8 +27,8 @@ export default function HomePage() {
       <div className="grid">
         {services.map((service) => (
           <Card key={service.id}>
-            <CardTitle>{service.name}</CardTitle>
-            <CardDescription>{service.description}</CardDescription>
+            <CardTitle>{service.title}</CardTitle>
+            <CardDescription>{service.summary}</CardDescription>
             <div style={{ height: 12 }} />
             <ButtonLink href={`/services/${service.id}`}>View details</ButtonLink>
           </Card>

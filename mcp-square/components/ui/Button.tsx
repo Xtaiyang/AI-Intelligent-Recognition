@@ -16,6 +16,14 @@ export function Button({ variant = 'default', className, ...props }: ButtonProps
   return <button className={getButtonClassName(variant, className)} {...props} />;
 }
 
+export type ButtonAnchorProps = ComponentPropsWithoutRef<'a'> & {
+  variant?: ButtonVariant;
+};
+
+export function ButtonAnchor({ variant = 'default', className, ...props }: ButtonAnchorProps) {
+  return <a className={getButtonClassName(variant, className)} {...props} />;
+}
+
 export type ButtonLinkProps = Omit<ComponentPropsWithoutRef<typeof Link>, 'className'> & {
   className?: string;
   variant?: ButtonVariant;
