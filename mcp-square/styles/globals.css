@@ -197,3 +197,91 @@ a {
   padding: 20px 0;
   color: var(--muted);
 }
+
+.h2 {
+  font-size: 1.3rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.errorText {
+  margin: 0;
+  color: #ff8a8a;
+  font-size: 0.85rem;
+}
+
+.input,
+.textarea,
+.select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+}
+
+.textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.select {
+  appearance: none;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 50;
+}
+
+.modal {
+  width: min(720px, 100%);
+  border: 1px solid var(--border);
+  background: rgba(18, 26, 42, 0.98);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.modalHeader,
+.modalFooter {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.modalFooter {
+  border-bottom: none;
+  border-top: 1px solid var(--border);
+}
+
+.modalTitle {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.modalBody {
+  padding: 16px;
+}

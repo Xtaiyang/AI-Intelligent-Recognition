@@ -10,6 +10,31 @@ npm run dev
 
 App will be available at http://localhost:3000.
 
+## Routes
+
+- `/browse` — public service listing
+- `/services/[id]` — public service detail page (full MCP info + contact CTA + related services)
+- `/admin/services` — admin CRUD UI (demo auth guard + optimistic updates)
+
+### Demo admin guard
+
+The admin area uses a **fake role guard** for now.
+
+- Click **“Enter admin (demo)”** on the page, or
+- Visit `/admin/services?as=admin`
+
+This is only a placeholder for future real authentication/authorization.
+
+## API
+
+- `GET /api/services` — list services
+- `POST /api/services` — create service
+- `GET /api/services/[id]` — get service
+- `PUT /api/services/[id]` — update service
+- `DELETE /api/services/[id]` — delete service
+
+Currently these endpoints use an in-memory store to support UI development.
+
 ## Build / start
 
 ```bash
